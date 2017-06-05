@@ -12,7 +12,7 @@
 <ol>
 	<li>Set up Twitch account and obtain Client ID</li>
 	<li>Create a successful GET request with Twitch</li>
-	<li>Use a Web Page to Display Results</li>
+	<li>Use a web page to display results</li>
 	<li>Perform multiple searches from one screen</li>
 	<li>Search across different twitch content types</li>
 </ol>
@@ -28,7 +28,14 @@
 <p>Before setting up a web page, test to ensure you can successfully communicate with Twitch.  Chrome's Advanced Rest Client works well for this purpose.  Create a GET request as shown in the screenshot below, adding your Client ID as the "Client-ID" header.  Ensure you get a response back that is not an error.</p>
 <img src = "mross444.github.io/screenshot2.PNG">
 <h2>Use a Web Page to Display Results</h2>
-<p>The below jsfiddle is an example of using the Twitch API to get results of the most popular live streams by game</p>
+<p>The below jsfiddle is an example of using the Twitch API to get results of the most popular live streams by game.  The JavaScript used in the example does the following:</p>
+<ol>
+	<li>Form the http request tested in step 2.  In this example we ask for streams rather than clips.  Documentation on what can be requested through the API is on the Twitch website.</li>
+	<li>Execute the response, then parse the JSON response text.</li>
+	<li>Loop through the response and create a preview element for item returned.  Add in the elements you want to display, including informations about the item and/or links to the content.</li>
 <iframe src = "https://jsfiddle.net/9oky6ch7/embedded/"></iframe>
+<h2>Perform Multiple Searches from One Screen</h2>
+<p>In the next jsfiddle, we copy the functions to create and handle the GET request to search across multiple games at the same time.</p>
+<iframe src = "https://jsfiddle.net/wdeo3kjb/embedded/"></iframe>
 </body>
 </html>
